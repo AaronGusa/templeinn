@@ -664,6 +664,35 @@ svg {
 .activeHead {
     color: #b78c17;
 }
+/*--------------------------- services-------*/
+.serviceH {
+    padding: 1rem 0 1rem 0.5rem;
+
+}
+.serviceCont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 0;
+    padding: .5rem;
+    justify-content: center;
+}
+
+.serviceImg {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    justify-content: center;
+    width: 399px;
+} 
+
+#contactButton {
+    font-size: 2rem;
+}
+
+#contactLabel {
+    width: 350px
+}
+
 
 
 
