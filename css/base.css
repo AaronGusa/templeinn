@@ -219,7 +219,7 @@ p {
     padding: 0;
 }
 
-#callAction {
+.callAction {
     display: block;
     margin: 0;
     width: 100%;
@@ -230,6 +230,11 @@ p {
     color: #b78c17;
     font-family: "Antonio", sans-serif;
     text-shadow: 0px 1px 1px #000000;
+    cursor: pointer;
+}
+
+.callAction:active {
+    background-color: #889785;
 }
 
 /*---------------- HQ Div ----------------*/
@@ -402,4 +407,115 @@ p {
 
 .btnScroll:active {
     background-color: #967314;
+}
+
+/*---------------------------------- Reserve Page ----------*/
+/* --------- Form ---------------*/
+
+.legends {
+    font-family: "Antonio", sans-serif;
+    color: #b78c17;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.formContainer {
+    margin: 1rem 0;
+    padding: 1rem 4%;
+    border: none;
+    background-color: #eeebd9;
+    box-shadow: 2px 2px 5px #2b3131 ;
+}
+
+form label.primary{
+    display: block;
+    padding-top: 1rem;
+    color: #b78c17;
+    font-size: 1.2rem;
+    width: 100%;
+    max-width: 20rem;
+}
+
+form label.primary input, form label.primary select {
+    -webkit-appearance: none;
+    display: block;
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1rem;
+    border-radius: 0 10px;
+    padding: 1rem 0;
+    padding-left: 1rem;
+    width: 90%;
+    max-width: 20rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+}
+
+form label.primary input:required {
+    border: none;
+    border-left: rgb(187, 85, 85) solid 4px;
+
+}
+
+form label.primary input:required:valid {
+    border: none;
+    border-left: rgb(61, 190, 61) solid 4px;
+
+}
+
+.secondary {
+    display: block;
+    padding: .75rem;
+    color: #b78c17;
+    font-size: 1.25rem;
+    padding: 1rem;
+    border-bottom: 1px solid #b78c17
+}
+
+
+.roomDetails {
+    list-style: none;
+    color: #b78c17;
+    padding-left: 0.5rem;
+}
+
+#bookButton {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    background-color: #eeebd9;
+
+}
+
+
+
+#fieldMemList {
+    display: flex;
+    font-size: 1.2rem;
+}
+
+
+.memSub {
+    list-style: none;
+    border-top: 1px solid rgb(255, 255, 255);
+    color: white;/* rgb(49, 64, 80);*/
+    font-weight: 200;
+}
+
+#memCost0 {
+    color: White;
+    font-size: 1.5rem;
+}
+
+.booked {
+    display: none;
+}
+
+.activeBooked {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem;
+}
+
+.activeBooked p {
+    text-align: center;
 }

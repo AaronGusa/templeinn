@@ -16,6 +16,7 @@ country, and special accommodations/comments. Make sure to do some form validati
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/base.css">
     <script defer src="js/menu.js"></script>
+    <script defer src="js/booked.js"></script>
 </head>
 <body>
     <header>
@@ -57,7 +58,56 @@ country, and special accommodations/comments. Make sure to do some form validati
         </div>
     </header>
     <main>
-
+        <form>
+            <h1  id="bookH1">Book with Us</h1>
+            <input type="hidden" id="formDate" name="formDate">
+            <fieldset class="formContainer">
+                <legend class="legends">Information</legend>
+                <label class="primary" for="fname"> First Name:
+                <input class="primary" type="text" id="fname" name="fname" required></label>
+                <label class="primary" for="lname"> Last Name:
+                <input class="primary" type="text" id="lname" name="lname" required></label>
+                
+                <label class="primary" for="cell"> Phone: 
+                    <input class="primary" type="tel" id="cell" name="cell" 
+                        placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></label>
+                <label class="primary" for="email">Email:
+                <input class="primary" type="email" id="email" name="email" placeholder="your-email@email.com" 
+                    required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></label><br>
+            </fieldset>
+            <div>
+                <section id="fieldMemList" class="formContainer">
+                    <div class="joinUl">
+                        <h2 class="legends">Room Details</h2>
+                        <ul class="roomDetails">
+                            <li>2 Doubles</li>
+                            <li><span>$85</span> ................. Kitchenette, Patio, Free Breakfast</li>
+                            <hr>
+                            <li>2 Queens</li>
+                            <li><span>$99</span> ................. Kitchenette, Patio, Free Breakfast</li>
+                            <hr>
+                            <li>2 Kings</li>
+                            <li><span>$150</span> ................ Full Sized Kitchen, Patio, Free Breakfast</li>
+                            <hr>  
+                            <li>Suite</li>
+                            <li><span>$186</span> ................ Full Sized Kitchen, Roof-Top Patio, Free Breakfast, Jacuzzi</li>
+                        </ul>
+                    </div>
+                </section>
+                <fieldset class="formContainer">
+                    <legend class="legends">Select Room Type</legend>
+                    <label class="secondary"><input class="radios" type="radio" name="membership"  value="double">  Double Suite</label>
+                    <label class="secondary"><input class="radios" type="radio" name="membership"  value="queen">   Queen Suite</label>
+                    <label class="secondary"><input class="radios" type="radio" name="membership"  value="king">    King Suite</label>
+                    <label class="secondary"><input class="radios" type="radio" name="membership"  value="suite">   Suite</label>
+                </fieldset>
+            </div>
+        </form> 
+        <button id="bookButton" class="callAction" onclick="bookedIt()">Book My Room</button>
+        <section class="booked">
+            <h2>You have been booked!</h2>
+            <p>You will recieve a confirmation shortly. We look forward to serving you.</p>
+        </section>
     </main>
     <footer>
         <!--
