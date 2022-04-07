@@ -27,10 +27,12 @@ The reception page displaying information about the wedding reception accommodat
 </head>
 <body>
     <header>
-        <h1 class="h1Large">Temple Inn & Suites</h1>
-        <h1 class="h1Small">Temple</h1>
-        <img class="logoMain" src="data/images/Full-Logo.webp" alt="Temple Inn & Suites Logo">
-        <img class="logoCompact" src="data/images/Logo-compact.webp" alt="Temple Inn Compact Logo">
+        <div class="headerCont">
+            <h1 class="h1Large">Temple Inn & Suites</h1>
+            <h1 class="h1Small">Temple</h1>
+            <img class="logoMain" src="data/images/Full-Logo.webp" alt="Temple Inn & Suites Logo">
+            <img class="logoCompact" src="data/images/Logo-compact.webp" alt="Temple Inn Compact Logo">
+        </div>
         <nav class="menu">
             <span class="open-slide">
                 <a href="#" onclick="openSlideMenu()">
@@ -42,30 +44,70 @@ The reception page displaying information about the wedding reception accommodat
                 </a>
             </span>
             <ul class="menuUl">
-                <li><a href="index.html">Home</a></li>
+                <li><a class="activeHead" href="index.html">Home</a></li>
                 <li><a href="temples.html">Temples</a></li>
                 <li><a href="reserve.html">Reserve</a></li>
                 <li><a href="services.html">Services</a>   
-                    <ul>
-                        <li><a class="activeHead" href="reception.html">Reception</a></li>
-                        <li><a href="missionary.html">Missionaries</a></li>
-                    </ul>
-                </li>
+                <li><a href="reception.html">Reception</a></li>
+                <li><a href="missionary.html">Missionaries</a></li>   
+                
             </ul>
         </nav>
         <div id="side-menu" class="side-nav">
             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-            <a href="index.html">Home</a>
+            <a class="activeHead" href="index.html">Home</a>
             <a href="temples.html">Temples</a>
             <a href="reserve.html">Reserve</a>
             <a href="services.html">Services</a>   
             
-            <a class="activeHead" href="reception.html">Reception</a>
+            <a href="reception.html">Reception</a>
             <a href="missionary.html">Missionaries</a>
         </div>
     </header>
     <main>
+        <div>
+            <h1 class="serviceCont">Where there's a Wedding, there's a Reception</h1>
+            <hr>
+        </div>
+        <div class="serviceCont">
+            <h2>Reception Hall</h2>
+            <p>There is no place more equipped to aid you in your big day than Temple Inn & Suites. Our highly sought
+                after facilities can accomadate you, your family, and your new extended family!
+            </p>
+            <img class="serviceImg" src="data/images/xvhpb-wedding-reception-9390-hor-feat.webp" alt="banquet hall" loading="lazy">
 
+        </div>
+        <hr>
+        <div class="serviceCont">
+            <h2>Gardens</h2>
+            <p>Don't be limited to a reception hall. We can take this celebration outside in our award winning curated
+                gardens. Be surrounded with His creations as all recieve you and your new spouse.
+            </p>
+            <img class="serviceImg" src="data/images/chic-rustic-theme-garden-wedding-reception-ideas.webp" alt="garden reception" loading="lazy">
+        </div>
+        <hr>
+        <div class="serviceCont">
+            <h2>Honeymoon Suites</h2>
+            <p>Temple Inn strives to be a complete package. We have suites especially for the first day of the rest of your
+                forever.
+            </p>
+            <img class="serviceImg" src="data/images/Honeymoon-Lynnhurst.webp" alt="hotel suite" loading="lazy">
+        </div>
+        <hr>
+        <div class="serviceCont">
+            <h2>Catering</h2>
+            <p>With talented chef's in our on site kitchens, keep your guests fed and happy. </p>
+            <img class="serviceImg" src="data/images/Catering-9817.webp" alt="catered table" loading="lazy">
+        </div>
+        <hr>
+        <div class="serviceCont">
+            <h2>Wedding Conceirge</h2>
+            <p>Need help? Our wedding planners are here to serve you. Take so much off your plate so you can be a participant
+                in your big day, instead of the orchestrator! 
+            </p>
+            <img class="serviceImg" src="data/images/wedding-planner-56a0f14a5f9b58eba4b56988.webp" alt="wedding planner" loading="lazy">
+        </div>
+        <hr>
     </main>
     <footer>
         <!--

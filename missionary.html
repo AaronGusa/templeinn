@@ -17,10 +17,12 @@ A full-time temple missionary page that provides information and images about th
 </head>
 <body>
     <header>
-        <h1 class="h1Large">Temple Inn & Suites</h1>
-        <h1 class="h1Small">Temple</h1>
-        <img class="logoMain" src="data/images/Full-Logo.webp" alt="Temple Inn & Suites Logo">
-        <img class="logoCompact" src="data/images/Logo-compact.webp" alt="Temple Inn Compact Logo">
+        <div class="headerCont">
+            <h1 class="h1Large">Temple Inn & Suites</h1>
+            <h1 class="h1Small">Temple</h1>
+            <img class="logoMain" src="data/images/Full-Logo.webp" alt="Temple Inn & Suites Logo">
+            <img class="logoCompact" src="data/images/Logo-compact.webp" alt="Temple Inn Compact Logo">
+        </div>
         <nav class="menu">
             <span class="open-slide">
                 <a href="#" onclick="openSlideMenu()">
@@ -36,11 +38,9 @@ A full-time temple missionary page that provides information and images about th
                 <li><a href="temples.html">Temples</a></li>
                 <li><a href="reserve.html">Reserve</a></li>
                 <li><a href="services.html">Services</a>   
-                    <ul>
-                        <li><a href="reception.html">Reception</a></li>
-                        <li><a class="activeHead" href="missionary.html">Missionaries</a></li>
-                    </ul>
-                </li>
+                <li><a href="reception.html">Reception</a></li>
+                <li><a class="activeHead" href="missionary.html">Missionaries</a></li>   
+                
             </ul>
         </nav>
         <div id="side-menu" class="side-nav">
@@ -55,7 +55,53 @@ A full-time temple missionary page that provides information and images about th
         </div>
     </header>
     <main>
+        <div class="serviceCont">
+            <h1 class="serviceH">Missionaries!</h1>
+            <img class="serviceImg" src="data/images/missionary-training-center-walk-56b0c7e95f9b58def9c2ca84.webp" alt="missionaries" loading="lazy">
+        </div>
+        <hr>
+        <div class="serviceCont">
+            <h2>A Floor for Elders, A Floor for Sisters</h2>
+            <p>With respect for Mission rules, we supply rooms on separate floors for Elders, and Sisters. We work with
+                missionaries and mission leadership to support these representatives of Christ.
+            </p>
+            <img class="serviceImg" src="data/images/handcarts_lined_up.webp" alt="handcarts" loading="lazy">
+        </div>
+        <hr>
+        <div class="serviceCont">
+            <h2>Perfect for Mission Conferences</h2>
+            <p>Mission conference could only get better by being able to attend the temple as well. Temple Inn & Suites
+                can accomodate all the needs of Mission Presidents to organize and execute the perfect Mission Conference. </p>
+            <img class="serviceImg" src="data/images/thailand_missionaries_zone_conference_elders.webp" alt="missionaries at a conference" loading="lazy">
+        </div>
+        <hr>
+        <div class="serviceCont">
+            <h2>We'd Love to Hear from You!</h2>
+            <p>Feel free to reach out with any questions or curiousity you may have!</p>
+            
+        </div>
         
+
+
+        <form class="formContainer" action="thankyou.html">
+            <fieldset class="fieldContact">
+                <legend class="legends">Your Information</legend>
+                <label class="primary" for="fname"> First Name:
+                <input class="primary" type="text" id="fname" name="fname" required></label>
+                <label class="primary" for="lname"> Last Name:
+                <input class="primary" type="text" id="lname" name="lname" required></label>
+                
+                <label class="primary" for="email">Email:
+                <input class="primary" type="email" id="email" name="email" placeholder="your-email@email.com" 
+                    required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></label><br>
+
+                <legend class="legends">Message</legend>
+            
+                <textarea id="contactLabel" type="message" rows="5"></textarea>
+                <input id="contactButton" type="submit" value="Send My Message" class="callAction">
+            </fieldset>
+            
+        </form>
     </main>
     <footer>
         <!--

@@ -13,12 +13,10 @@
 </head>
 <body>
     <header>
-        <div class="headerCont">
-            <h1 class="h1Large">Temple Inn & Suites</h1>
-            <h1 class="h1Small">Temple</h1>
-            <img class="logoMain" src="data/images/Full-Logo.webp" alt="Temple Inn & Suites Logo">
-            <img class="logoCompact" src="data/images/Logo-compact.webp" alt="Temple Inn Compact Logo">
-        </div>
+        <h1 class="h1Large">Temple Inn & Suites</h1>
+        <h1 class="h1Small">Temple</h1>
+        <img class="logoMain" src="data/images/Full-Logo.webp" alt="Temple Inn & Suites Logo">
+        <img class="logoCompact" src="data/images/Logo-compact.webp" alt="Temple Inn Compact Logo">
         <nav class="menu">
             <span class="open-slide">
                 <a href="#" onclick="openSlideMenu()">
@@ -33,10 +31,12 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="temples.html">Temples</a></li>
                 <li><a href="reserve.html">Reserve</a></li>
-                <li><a class="activeHead" href="services.html">Services</a>   
-                <li><a href="reception.html">Reception</a></li>
-                <li><a href="missionary.html">Missionaries</a></li>   
-                
+                <li><a href="services.html">Services</a>   
+                    <ul>
+                        <li><a href="reception.html">Reception</a></li>
+                        <li><a href="missionary.html">Missionaries</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <div id="side-menu" class="side-nav">
@@ -44,44 +44,17 @@
             <a href="index.html">Home</a>
             <a href="temples.html">Temples</a>
             <a href="reserve.html">Reserve</a>
-            <a class="activeHead" href="services.html">Services</a>   
+            <a href="services.html">Services</a>   
             
             <a href="reception.html">Reception</a>
             <a href="missionary.html">Missionaries</a>
         </div>
     </header>
     <main>
-        <h1 class="serviceH">How can we serve you?</h1>
-        <div class="serviceCont">
-            <hr>
-            <h2>Arrived just in time for your appointment?</h2>
-            <p>We have you covered. With conveniently located changing rooms and bathroom facilities,
-                you do not need to worry about "travel clothes". Spruce up, and change when you arrive!
-            </p>
-            <img class="serviceImg" src="data/images/lockerroom.webp" alt="locker room" loading="lazy"> 
+        <div class="thankCont">
+            <h1>THANK YOU!</h1>
+            <p>We have received your message! We will get back to you as soon as possible.</p>
         </div>
-        <hr>
-        <div class="serviceCont">
-            <h2>What do we do with the Kids?</h2>
-            <p>Not to worry! With our proffesional on-site child care, you can visit the temple in peace.   
-            </p>
-            <img class="serviceImg" src="data/images/childcare.webp" alt="child care with children" loading="lazy">
-        </div>
-        <hr>
-        <div class="serviceCont">
-            <h2>Prepare for the temple</h2>
-            <p>Feel inspired by our temple history themed reception and sitting area, and then engage in 
-                the family search center that supports family search and ordinance work! 
-            </p>
-            <img class="serviceImg" src="data/images/rexburg_temple_lds.webp" alt="Rexburg Temple" loading="lazy">
-        </div>
-        <hr>
-        <div class="serviceCont">
-            <img class="serviceImg" src="data/images/eyring.webp" alt="men in white" loading="lazy">
-            <h2>Just got called as a Temple Worker? We have you covered!</h2>
-            <p>Long-term stay accommodations in kitchenette suites for full-time temple missionaries</p>
-        </div>
-        <hr>
     </main>
     <footer>
         <!--
@@ -110,5 +83,3 @@
             Aaron Gusa | 🏛 BYU-Idaho | WDD 230
         </div>
     </footer>
-</body>
-</html>

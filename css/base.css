@@ -182,6 +182,7 @@ p {
 .subTitle {
     color: white;
     background-color: #b78c17;
+    padding-left: 0.5rem;
 }
 
 .logoMain, .logoCompact {
@@ -450,13 +451,13 @@ form label.primary input, form label.primary select {
     border: none;
 }
 
-form label.primary input:required {
+.primary input:required {
     border: none;
     border-left: rgb(187, 85, 85) solid 4px;
 
 }
 
-form label.primary input:required:valid {
+.primary input:required:valid {
     border: none;
     border-left: rgb(61, 190, 61) solid 4px;
 
@@ -484,7 +485,6 @@ form label.primary input:required:valid {
     background-color: #eeebd9;
 
 }
-
 
 
 #fieldMemList {
@@ -519,3 +519,168 @@ form label.primary input:required:valid {
 .activeBooked p {
     text-align: center;
 }
+
+/*------------------------- Services HTML ----------------*/
+.serviceH {
+    padding: 1rem 0 1rem 0.5rem;
+
+}
+.serviceCont {
+    margin: 0;
+    padding: .5rem;
+    justify-content: center;
+}
+
+.serviceImg {
+    justify-content: center;
+    width: 399px;
+} 
+
+#contactButton {
+    font-size: 2rem;
+}
+
+#contactLabel {
+    width: 350px
+}
+
+/*------------------------- Thanks HTML ----------------*/
+.thankCont {
+    padding: 3rem 0.5rem;
+}
+
+/*---------------------------------------- MEDIA QUERIES ---------*/
+/*      Medium         */
+@media only screen and (min-width: 680px ) {
+    .welcomeCont {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        border-bottom: 2px solid #b78c17;
+        
+    }
+
+    .welcome, .welcomeTo, .welcomeTemple, .welcomeInn {
+        font-size: 38pt;
+        padding: 15px;
+    }
+
+    .templeContainer {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .templeImg {
+        grid-column: 2;
+        grid-row: 1 / span 5;
+        height: 300px;
+        width: auto;
+    }
+
+    .templeName {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    /*---------------------- NAV MENU ---------*/
+svg {
+    display: none;
+}
+
+.logoCompact {
+    width: 95%;
+    max-width: 304px;
+    display: flex;
+    justify-content: center;
+}
+
+.headerCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.h1Small {
+    display: none;
+}
+
+.h1Large {
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Antonio', sans-serif;
+    justify-content: space-around;
+    
+    /*border: 2px solid rgb(183, 140, 23);*/
+    border-top: 2px solid #b78c17;
+    margin:0;
+    padding: 0.25rem;
+    padding-left: none;
+    color: white;
+}
+
+
+.menuUl{
+    display: flex;
+    justify-content: left;
+}
+
+.menuUl, .menuUl li, .menu a {
+    text-decoration: none;
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+    color: #000000;
+    justify-content: space-around;
+}
+
+.menuUl:hover, .menuUl li:hover, .menu a:hover {
+    color: white;
+}
+
+
+.side-nav a {
+    padding: 10px 10px 10px 30px;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-nav .btn-close {
+    position: absolute;
+    top: 0;
+    font-size: 3rem;
+}
+
+.activeHead {
+    color: #b78c17;
+}
+
+
+
+
+}
+/* ---------  END OF MEDIUM MEDIA ------------*/
+/*      Large         */
+@media only screen and (min-width: 930px ) {
+    
+
+    .welcome, .welcomeTo, .welcomeTemple, .welcomeInn {
+        font-size: 72pt;
+        padding: 15px;
+    }
+
+
+
+
+}
+/* ---------  END OF LARGE MEDIA ------------*/
