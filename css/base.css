@@ -120,7 +120,7 @@ p {
     border-top: 2px solid #b78c17;
     margin:0;
     padding: 0.25rem;
-    padding-left: none;
+    padding-left: 0;
     color: white;
 }
 
@@ -622,7 +622,7 @@ svg {
     border-top: 2px solid #b78c17;
     margin:0;
     padding: 0.25rem;
-    padding-left: none;
+    padding-left: 0;
     color: white;
 }
 
