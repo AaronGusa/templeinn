@@ -21,18 +21,30 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/base.css">
     <script defer src="js/templeScript.js"></script>
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/toTop.js"></script>
 </head>
 <body>
     <header>
-        <h1>Temple Inn & Suites</h1>
+        <h1 class="h1Large">Temple Inn & Suites</h1>
+        <h1 class="h1Small">Temple</h1>
         <img class="logoMain" src="data/images/Full-Logo.webp" alt="Temple Inn & Suites Logo">
         <img class="logoCompact" src="data/images/Logo-compact.webp" alt="Temple Inn Compact Logo">
         <nav class="menu">
+            <span class="open-slide">
+                <a href="#" onclick="openSlideMenu()">
+                    <svg width="30" height="30">
+                        <path d="M0,5 30,5" stroke="#b78c17" stroke-width="5"/>
+                        <path d="M0,14 30,14" stroke="#b78c17" stroke-width="5"/>
+                        <path d="M0,23 30,23" stroke="#b78c17" stroke-width="5"/>
+                    </svg>
+                </a>
+            </span>
             <ul class="menuUl">
                 <li><a href="index.html">Home</a></li>
                 <li><a class="activeHead" href="temples.html">Temples</a></li>
                 <li><a href="reserve.html">Reserve</a></li>
-                <li>Services   
+                <li><a href="services.html">Services</a>   
                     <ul>
                         <li><a href="reception.html">Reception</a></li>
                         <li><a href="missionary.html">Missionaries</a></li>
@@ -40,8 +52,37 @@
                 </li>
             </ul>
         </nav>
+        <div id="side-menu" class="side-nav">
+            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+            <a href="index.html">Home</a>
+            <a class="activeHead" href="temples.html">Temples</a>
+            <a href="reserve.html">Reserve</a>
+            <a href="services.html">Services</a>   
+            
+            <a href="reception.html">Reception</a>
+            <a href="missionary.html">Missionaries</a>
+        </div>
     </header>
     <main>
+        <button class="btnScroll">TOP</button>
+        <div class="welcomeCont">
+            <h2 class="welcome">Welcome</h2>
+            <h2 class="welcomeTo">to</h2> 
+            <h2 class="welcomeTemple">Temples</h2>
+            <p>From the very beginning, there have been sacred places upon the earth 
+                where God has communed with His children. They were designated by God 
+                and hallowed by His presence as places where He would teach and bless 
+                His children. <br><br> 
+                Today, there are over 160 operating temples in countries around the 
+                world. Dozens more are announced or under construction. <br><br>
+
+                Regardless of the time in history, a temple of God is the most sacred 
+                place of worship in the world — a place where heaven touches the earth, 
+                a place where marvelous blessings are bestowed, and a place where we can 
+                feel closer to our Heavenly Father and Jesus Christ as we strive to become 
+                more like Them.
+            </p> <a href="https://www.churchofjesuschrist.org/temples/why-latter-day-saints-build-temples?lang=eng">Read more...</a>
+        </div>
         
         <section class="templeCards"> 
             <!--  For JSON process
@@ -71,7 +112,7 @@
             items might include social media links (again), a basic Contact Us form, 
             and/or other relevant material. 
         -->
-        <img src="data/images/Wordless-Logo.webp" alt="mini-logo">
+        <img class="footerImg" src="data/images/Wordless-Logo.webp" alt="mini-logo">
         <div>
             <h2>Headquarters</h2>
             <p>4800 Montgomery Ln #300 <br> Bethesda, MD 20814</p>
@@ -81,10 +122,14 @@
             <hr>
         </div>
         
-        <div>
-            <h2>Social Media:</h2>
+        <div class="socials">
+            <a class="socialA" href="https://www.instagram.com/churchofjesuschrist/"><img class="socialImg" src="data/images/insta.webp" alt="instagram logo"></a>
+            <a class="socialA" href="https://www.churchofjesuschrist.org"><img class="socialImg" src="data/images/COJCsymbol.webp" alt="Christ Logo"></a>
+            <a class="socialA" href="https://www.facebook.com/ChurchofJesusChrist/?msclkid=c0466691b62411ec99c53847b4c173e7"><img class="socialImg" src="data/images/fb.webp" alt="facebook logo"></a>
         </div>
-
+        <div>
+            Aaron Gusa | 🏛 BYU-Idaho | WDD 230
+        </div>
     </footer>
 </body>
 </html>

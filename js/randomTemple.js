@@ -1,5 +1,5 @@
 const requestURL = "https://api.jsonstorage.net/v1/json/87a13e64-aadc-4b08-8adb-118b447a73fd/9a8c6fea-a4a9-4c38-ae0d-5f5626f511a0";
-const cards = document.querySelector(".templeCards");
+const cards = document.querySelector(".summaryTemple");
 
 
 
@@ -48,10 +48,10 @@ function cardCreator(temple) {
     phone.innerHTML = `${temple.phone}`;
     email.innerHTML = `${temple.email}@churchofjesuschrist.com`;
     address.innerHTML = `${temple.address[0]} <br> ${temple.address[1]} <br> ${temple.address[2]}`;
-    ordList.innerHTML = `<h2 class="subTitle">Ordinace Schedule</h2>`;
-    closeList.innerHTML = `<h2 class="subTitle">Upcoming Closures</h2>`;
-    sessList.innerHTML = `<h2 class="subTitle">Session Schedule</h2>`;
-    milesList.innerHTML = `<h2 class="subTitle">Milestones</h2>`;
+    ordList.innerHTML = `Ordinace Schedule`;
+    closeList.innerHTML = `Upcoming Closures`;
+    sessList.innerHTML = `Session Schedule`;
+    milesList.innerHTML = `Milestones`;
 
 // JSON Array Handling
     
@@ -87,7 +87,6 @@ function cardCreator(temple) {
     name.setAttribute("class", "templeName"); 
     dedicated.setAttribute("class", "dedication");
     
-
     image.setAttribute("class", "templeImg");
     image.setAttribute("src", `${temple.imageUrl}`); 
     image.setAttribute("alt", `Image of ${temple.name}`);
@@ -100,20 +99,19 @@ function cardCreator(temple) {
     ordList.setAttribute("class", "ordList");
     sessList.setAttribute("class", "sessList");
     closeList.setAttribute("class", "closeList");
-    milesList.setAttribute("class", "milesList");
-
+    
     ordinanceCont.setAttribute("class", "ordCont");
     sessionCont.setAttribute("class", "sessCont");
     closedCont.setAttribute("class", "closeCont");
-    milesCont.setAttribute("class", "milesCont");
+
 
 
 
 // APPENDING
-    ordinanceCont.appendChild(ordList);
-    sessionCont.appendChild(sessList);
-    closedCont.appendChild(closeList);
-    milesCont.appendChild(milesList);
+    //ordinanceCont.appendChild(ordList);
+    //sessionCont.appendChild(sessList);
+    //closedCont.appendChild(closeList);
+    //milesCont.appendChild(milesList);
 
     container.appendChild(image);
     container.appendChild(name);
@@ -141,5 +139,15 @@ fetch(requestURL)
     .then(function (jsonObject) {
         console.table(jsonObject)
         const temples = jsonObject["templeArray"];
-        temples.forEach(cardCreator) //function to build cards
+        random0 = Math.floor(Math.random() * 5)
+        random1 = Math.floor(Math.random() * 5)
+        random2 = Math.floor(Math.random() * 5)
+        random3 = Math.floor(Math.random() * 5)
+
+        cardCreator(temples[random0]) //function to build cards
+        cardCreator(temples[random1]) //function to build cards
+        cardCreator(temples[random2]) //function to build cards
+        cardCreator(temples[random3]) //function to build cards
+        
+        
     })

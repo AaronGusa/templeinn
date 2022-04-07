@@ -1,1 +1,405 @@
+
+
+/*
+Contents
+
+i.   Universal
+    a. FONTS
+    b. HTML
+    c. HEADER
+    d. MAIN
+    e. FOOTER
+ii.  small
+    a. home
+    b. target
+    c. colors
+    d. type
+iii. medium
+    a. home
+    b. target
+    c. colors
+    d. type
+iv.  large
+    a. home
+    b. target
+    c. colors
+    d. type
+*/
+
+
+/*----------------------------- small ------------------------------------------------*/
+/*------------ universal --------------*/
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@300&family=Cormorant+Garamond:wght@500&family=Open+Sans&display=swap');
+
+/*----------------------header footer main*/
+header, footer {
+    background-color: #b9ccb6;
+    color: black;
+    margin: 0;
+    padding: 0.25rem;
+    text-align: center;
+    /*text-shadow: 3px 3px 3px black;*/
+}
+
+
+main {
+    transition: 0.5s;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+a {
+    padding: 10px 10px 10px 30px;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #b78c17;
+}
+
+hr {
+    border: 2px solid #b78c17;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Antonio", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-family: "Caramont Garamond", serif;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+
+.footerImg {
+    height: 150px;
+    width: auto;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+
+}
+
+.socialImg {
+    width: 75px;
+}
+
+.socialA {
+    margin: 0;
+    padding: 0;
+}
+
+/*------- CLASSES ---------------------------*/
+
+.hidden {
+    display: none;
+}
+
+.h1Large {
+    display: none;
+}
+
+.h1Small {
+    margin: 0;
+    padding: 0;
+    font-family: "Antonio", sans-serif;
+    color: #b78c17;
+}
+/*---------------------- NAV MENU ---------*/
+.menu {
+    display: grid;
+    font-family: 'Open Sans', serif;
+    overflow: hidden;
+    /*border: 2px solid rgb(183, 140, 23);*/
+    border-top: 2px solid #b78c17;
+    margin:0;
+    padding: 0.25rem;
+    padding-left: none;
+    color: white;
+}
+
+.menuUl{
+    display: none;
+}
+
+.menuUl, .menuUl li, .menu a {
+    text-decoration: none;
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+    color: #000000;
+}
+
+.open-slide {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+}
+
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    display: block;
+    text-align: left;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(183, 140, 23, 0.6);
+    overflow-x: hidden;
+    padding-top: 20%;
+    transition: 1.0s;
+}
+
+.side-nav a {
+    padding: 10px 10px 10px 30px;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-nav .btn-close {
+    position: absolute;
+    top: 0;
+    font-size: 3rem;
+}
+
+.activeHead {
+    background-color: #b78c17;
+}
+
+
+/*------------------------------- Index -------------------------------------*/
+.subTitle {
+    color: white;
+    background-color: #b78c17;
+}
+
+.logoMain, .logoCompact {
+    width: 95%;
+    max-width: 304px;
+    display: none;
+}
+
+
+/*---------- Weather Alert Banner -----------------------*/
+#weatherAlertBanner {
+    background-color: #643939;
+    color: white;
+    margin: 0;
+    padding: 0 .5rem;
+    padding-top: 15px;
+    padding-bottom: 0;
+}
+
+.bannerH {
+    text-align: center;
+}
+
+#closeBanner {
+    float: right;
+     
+    border: none;
+    background-color: transparent;
+}
+
+/*------------- Reserve call to action--------*/
+
+.callToAction {
+    margin: -20px;
+    padding: 0;
+}
+
+#callAction {
+    display: block;
+    margin: 0;
+    width: 100%;
+    border: none;
+    border-top: solid 5px #b78c17;
+    background-color: #b9ccb6;
+    padding: 1.5rem;
+    color: #b78c17;
+    font-family: "Antonio", sans-serif;
+    text-shadow: 0px 1px 1px #000000;
+}
+
+/*---------------- HQ Div ----------------*/
+
+.welcomeCont {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.welcome {
+    font-size: 2.5rem;
+}
+.welcomeTemple {
+    font-size: 3.5rem;
+}
+
+.blurb {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/*------------------ Temple Div--------------*/
+.summaryTemple {
+    display: grid;
+    justify-items: center;
+
+}
+
+.templeContainer {
+    overflow: hidden;
+    width: 95%;
+    margin: 0;
+    padding: 0.5rem;
+    border-bottom: 5px solid #b78c17;
+    background-color: #fdfff5;
+}
+
+.templeImg {
+    width: 300px;
+}
+
+/*-------------- Weather Cards -----------*/
+
+.weatherContainer {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: #b9ccb6;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.weatherTitle {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.weatherTemp {
+    grid-column: 1;
+    grid-row: 2;
+}
+.weatherCondition {
+    grid-column: 3;
+    grid-row: 1;
+}
+.weatherHumidity {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.weatherIcon {
+    grid-column: 2;
+    grid-row:2;
+}
+
+.forecastGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .65fr 2fr;
+}
+
+.forecastGrid h2 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    padding-left: .5rem;
+}
+
+.forecastCont {
+    margin: 0.1rem;
+    padding: 0.5rem;
+    background-color: #b9ccb6;
+    border-radius: 20px;
+}
+
+.forecastCont:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.forecastCont:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.forecastCont:nth-child(4) {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+/*----------------------------------------- TEMPLES HTML ------------*/
+.ordList li, .sessList li, .closeList li, .milesList {
+    text-decoration: none;
+    list-style: none;
+    padding-top: 5px;
+}
+
+.ordList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin: 0;
+    padding-left: 0.5rem;
+    align-items: center;
+    text-align: center;
+}
+
+.sessList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 0;
+    padding-left: 0.5rem;
+    align-items: center;
+    text-align: center;
+}
+
+.ordList .subTitle, .sessList .subTitle {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    margin: 0;
+}
+
+.closeList, .milesList {
+    padding-left: 0.5rem;
+
+}
+
+.closeList li, .milesList li {
+    border-bottom: 1px solid #b78c17;
+    padding: 0.3rem;
+}
+
+.btnScroll {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    border-color: #b9ccb6;
+    background-color:#b78c17 ;
+    font-family: "Antonio", sans-serif;
+    box-shadow: 2px 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.btnScroll:active {
+    background-color: #967314;
+}

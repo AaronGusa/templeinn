@@ -23,14 +23,14 @@ function weatherBuild(weather) {
     wContainer = document.createElement("div");
     createTitle = document.createElement("h2");
     createCurrent = document.createElement("h3");
-    createCondition = document.createElement("p");
-    createHumidity = document.createElement("p");
+    createCondition = document.createElement("h4");
+    createHumidity = document.createElement("h4");
     createImage = document.createElement("img");
 
     // Content
-    createTitle.innerHTML = "Weather";
-    createCurrent.innerHTML = `Current Temp: ${currentTemp}&deg;F`;
-    createCondition.innerHTML = `Condition: ${condition}`;
+    createTitle.innerHTML = "Currently";
+    createCurrent.innerHTML = `Temp: ${currentTemp}&deg;F`;
+    createCondition.innerHTML = `Condition:<br> ${condition}`;
     createHumidity.innerHTML = `Humidity: ${humidity}%`;
 
     // Attributary
@@ -63,8 +63,6 @@ fetch(weatherAPI)
         return response.json();
     })
     .then (function (jsonObject) {
-        console.log("working")
-        console.table(jsonObject);
         const weather = jsonObject;
         weatherBuild(weather);
     })
@@ -96,8 +94,8 @@ function forecastBuild(forecast) {
     fContainer1 = document.createElement("div");
     fTitle1 = document.createElement("h3");
     fCurrent1 = document.createElement("h3");
-    fCondition1 = document.createElement("p");
-    fHumidity1 = document.createElement("p");
+    fCondition1 = document.createElement("h4");
+    fHumidity1 = document.createElement("h4");
     fImage1 = document.createElement("img");
     
     //////// Content
@@ -108,7 +106,7 @@ function forecastBuild(forecast) {
     fHumidity1.innerHTML = `Humidity: ${humidity1}%`;
 
     //////// Attributary
-
+    fMainContainer.setAttribute("class", "forecastGrid");
     fContainer1.setAttribute("class", "forecastCont");
     fTitle1.setAttribute("class", "forecastTitle");
     fCurrent1.setAttribute("class", "forecastTemp");
@@ -140,8 +138,8 @@ function forecastBuild(forecast) {
     fContainer2 = document.createElement("div");
     fTitle2 = document.createElement("h3");
     fCurrent2 = document.createElement("h3");
-    fCondition2 = document.createElement("p");
-    fHumidity2 = document.createElement("p");
+    fCondition2 = document.createElement("h4");
+    fHumidity2 = document.createElement("h4");
     fImage2 = document.createElement("img");
     
     //////// Content
@@ -184,8 +182,8 @@ function forecastBuild(forecast) {
     fContainer3 = document.createElement("div");
     fTitle3 = document.createElement("h3");
     fCurrent3 = document.createElement("h3");
-    fCondition3 = document.createElement("p");
-    fHumidity3 = document.createElement("p");
+    fCondition3 = document.createElement("h4");
+    fHumidity3 = document.createElement("h4");
     fImage3 = document.createElement("img");
     
     //////// Content
@@ -227,8 +225,6 @@ fetch(forecastAPI)
         return response.json();
     })
     .then (function (jsonObject) {
-        console.log("workingtwo")
-        console.table(jsonObject);
         const forecast = jsonObject;
         forecastBuild(forecast);
     })
@@ -259,9 +255,10 @@ function alertBuild(alerts) {
     alertButt.setAttribute("id", "closeBanner")
 
     // Appending
+    alertBanner.appendChild(alertButt);
     alertBanner.appendChild(alertTitle);
     alertBanner.appendChild(alertp);
-    alertBanner.appendChild(alertButt);
+    
 
 }
 
@@ -270,8 +267,6 @@ fetch(alertAPI)
         return response.json();
     })
     .then (function (jsonObject){
-        console.log("workingthree");
-        console.table(jsonObject);
         const alerts = jsonObject;
         alertBuild(alerts);
 

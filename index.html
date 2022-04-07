@@ -10,18 +10,30 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/base.css">
     <script defer src="js/weather.js"></script>
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/randomTemple.js"></script>
 </head>
 <body>
     <header>
-        <h1>Temple Inn & Suites</h1>
+        <h1 class="h1Large">Temple Inn & Suites</h1>
+        <h1 class="h1Small">Temple</h1>
         <img class="logoMain" src="data/images/Full-Logo.webp" alt="Temple Inn & Suites Logo">
         <img class="logoCompact" src="data/images/Logo-compact.webp" alt="Temple Inn Compact Logo">
         <nav class="menu">
+            <span class="open-slide">
+                <a href="#" onclick="openSlideMenu()">
+                    <svg width="30" height="30">
+                        <path d="M0,5 30,5" stroke="#b78c17" stroke-width="5"/>
+                        <path d="M0,14 30,14" stroke="#b78c17" stroke-width="5"/>
+                        <path d="M0,23 30,23" stroke="#b78c17" stroke-width="5"/>
+                    </svg>
+                </a>
+            </span>
             <ul class="menuUl">
                 <li><a class="activeHead" href="index.html">Home</a></li>
                 <li><a href="temples.html">Temples</a></li>
                 <li><a href="reserve.html">Reserve</a></li>
-                <li>Services   
+                <li><a href="services.html">Services</a>   
                     <ul>
                         <li><a href="reception.html">Reception</a></li>
                         <li><a href="missionary.html">Missionaries</a></li>
@@ -29,6 +41,16 @@
                 </li>
             </ul>
         </nav>
+        <div id="side-menu" class="side-nav">
+            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+            <a class="activeHead" href="index.html">Home</a>
+            <a href="temples.html">Temples</a>
+            <a href="reserve.html">Reserve</a>
+            <a href="services.html">Services</a>   
+            
+            <a href="reception.html">Reception</a>
+            <a href="missionary.html">Missionaries</a>
+        </div>
     </header>
     <main>
         <!--
@@ -55,32 +77,40 @@
             Display and label a three day forecast of the "day" temperature using the current date. 
             This can be designed in another card or area.
         -->
-
-        <div class="callToAction">
-            <button class="buttons">Reserve Now</button>
-        </div>
+        <section id="weatherAlertBanner" onclick="bannerClose()"></section>
+        
         <div class="headQuarters">
-            <h2>Welcome to Temple Inn & Suites</h2>
-            <p>At Temple Inn and Suites we complement your visit to heaven on earth
+            <div class="welcomeCont">
+                <h2 class="welcome">Welcome</h2>
+                <h2 class="welcomeTo">to</h2> 
+                <h2 class="welcomeTemple">Temple</h2>
+                <h2 class="welcomeInn">Inn & Suites</h2>
+            </div>
+            <div class="callToAction">
+                <a href="reserve.html"><button id="callAction" class="buttons">Reserve Now</button></a>
+            </div>
+            <p class="blurb" >At Temple Inn and Suites we complement your visit to heaven on earth
                with lodging where you can keep the experience and reverence with you.
             </p>
             <hr>
-            <h2>Headquarters</h2>
-            <p>4800 Montgomery Ln #300 <br> Bethesda, MD 20814</p>
-            <p>Phone: (555) 555-5555</p>
-            <p>Email: customerservice@templeInn.com</p>
+            <h2 class="subTitle">Headquarters</h2>
+            <p class="blurb">4800 Montgomery Ln #300 <br> Bethesda, MD 20814</p>
+            <p class="blurb">Phone: (555) 555-5555</p>
+            <p class="blurb">Email: customerservice@templeInn.com</p>
         </div>
+        <hr>
+        <h2 class="subTitle">Temples</h2>
         <div class="summaryTemple">
-            <h2>Temples</h2>
+            
         </div>
-        <div class="booking">
-            <button>Book Now!</button>
+        <div class="callToAction">
+            <a href="reserve.html"><button id="callAction" class="buttons">Reserve Now</button></a>
         </div>
         <div>
-            <h2>Social Media</h2>
+            <h2 class="subTitle">Weather</h2>
         </div>
         <div class="weather">
-            <section id="weatherAlertBanner" onclick="bannerClose()"></section>
+            
             <section class="weatherCard">
 
             </section> 
@@ -108,7 +138,7 @@
             items might include social media links (again), a basic Contact Us form, 
             and/or other relevant material. 
         -->
-        <img src="data/images/Wordless-Logo.webp" alt="mini-logo">
+        <img class="footerImg" src="data/images/Wordless-Logo.webp" alt="mini-logo">
         <div>
             <h2>Headquarters</h2>
             <p>4800 Montgomery Ln #300 <br> Bethesda, MD 20814</p>
@@ -118,10 +148,14 @@
             <hr>
         </div>
         
-        <div>
-            <h2>Social Media:</h2>
+        <div class="socials">
+            <a class="socialA" href="https://www.instagram.com/churchofjesuschrist/"><img class="socialImg" src="data/images/insta.webp" alt="instagram logo"></a>
+            <a class="socialA" href="https://www.churchofjesuschrist.org"><img class="socialImg" src="data/images/COJCsymbol.webp" alt="Christ Logo"></a>
+            <a class="socialA" href="https://www.facebook.com/ChurchofJesusChrist/?msclkid=c0466691b62411ec99c53847b4c173e7"><img class="socialImg" src="data/images/fb.webp" alt="facebook logo"></a>
         </div>
-
+        <div>
+            Aaron Gusa | 🏛 BYU-Idaho | WDD 230
+        </div>
     </footer>
 </body>
 </html>
